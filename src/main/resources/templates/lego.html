@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lego</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: purple">
+<div class="container" style="background-color: snow">
+    <header>
+        <br/>
+        <img src="https://gowithfloat.com/wp-content/uploads/2015/05/lego-645x379.jpg" alt="nie można wstawić zdjęcia"
+             class="rounded mx-auto d-block">
+        <br/>
+        <h1 class="text-center"> Moje obecne i planowane zestawy Lego </h1>
+        <br/>
+
+    </header>
+
+
+    <a href="/dodaj">Dodaj nowy zestaw lego do listy<br/></a>
+    <br/>
+
+    <h3>Lista zestawów</h3>
+    <ul class="list-unstyled">
+        <li th:each="lego: ${legos}">
+            <a th:href="@{'/szczegoly/' + ${lego.id}}" th:text="${lego.name}"></a></li>
+        <br/>
+    </ul>
+    <br/>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: purple">
+<div class="container" style="background-color: snow">
+
+    <br/>
+    <a href="/">Powrót do listy</a><br/>
+
+    <br/>
+    <h2 th:text="|${lego.name} (${lego.serialNumber})|">Pociąg do Hogwardu</h2><br/>
+
+    <p th:text="|Liczba klocków: ${lego.blokcsNumber}|"></p>
+    <p th:text="|Przeznaczenie: ${lego.targetAudience}|"></p>
+    <p th:text="|Kategoria: ${lego.category}|"></p>
+    <p th:text="|Data zakupu lub planowana data zakupu: ${lego.buyDate}|"></p>
+    <p th:text="|Opis: ${lego.description}|"></p>
+    <div class="text-center">
+        <br/>
+        <img th:src="${lego.imgUrl}" class="rounded mx-auto d-block" alt="brak zdjęcia" width="500" height="500">
+        <br/>
+    </div>
+</div>
+</body>
+</html>

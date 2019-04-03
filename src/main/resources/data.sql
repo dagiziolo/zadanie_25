@@ -1,0 +1,8 @@
+INSERT INTO lego(name, serial_number, blokcs_number, buy_date,  target_audience, category, description, img_url) VALUES
+('Legowisko Aragoga', 75950, 157, '2018-12-13', 'UNIVERSAL', 'HARRY POTTER', 'Przygotuj się na starcie z pająkami z Zakazanego Lasu w emocjonującym zestawie Legowisko Aragoga.', 'http://www.klocki.wroclaw.pl/75950-13193-thickbox/lego-harry-potter-75950-legowisko-aragoga.jpg');
+INSERT INTO lego(name, serial_number, blokcs_number, buy_date,  target_audience, category, description, img_url) VALUES
+('Mecz quidditcha', 75956, 500, '2019-06-01', 'UNIVERSAL', 'HARRY POTTER', 'Rozegraj mecz najbardziej emocjonującej gry czarodziejów w zestawie Mecz quidditcha.', 'http://www.klocki.wroclaw.pl/75956-13378-thickbox/lego-harry-potter-75956-mecz-quidditcha.jpg');
+INSERT INTO lego(name, serial_number, blokcs_number, buy_date,  target_audience, category, description, img_url) VALUES
+('Emily Jones i ucieczka orła', 41190, 149, '2018-04-14', 'GIRL', 'ELVES', 'Skorzystaj ze swoich magicznych zdolności i odzyskaj skradzioną stronę z magicznego pamiętnika z Emily Jones i orlicą Lumią! ','http://www.klocki.wroclaw.pl/41190-12854-thickbox/lego-elves-41190-emily-jones-i-ucieczka-orla.jpg');
+INSERT INTO lego(name, serial_number, blokcs_number, buy_date,  target_audience, category, description, img_url) VALUES
+('Złoty Smok', 70666, 171, '2019-03-14', 'BOY', 'NINJAGO', 'Odtwórz niezapomniane ostateczne starcie Złotego Ninja Lloyda z Władcą w zestawie Złoty Smok.','http://www.klocki.wroclaw.pl/70666-13633-thickbox/lego-ninjago-70666-zloty-smok.jpg');

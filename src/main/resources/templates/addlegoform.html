@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: purple">
+<div class="container" style="background-color: snow">
+
+    <br/>
+    <a href="/">Powrót do listy</a><br/>
+
+    <br/>
+    <form th:action="@{/dodaj}" method="post" th:object="${lego}">
+
+        <div class="form-group row">
+            <label for="nameId" class="col-sm-2 col-form-label">Nazwa zestawu</label>
+            <div class="col-md-4">
+                <input type="text" name="name" class="form-control" id="nameId" placeholder="Nazwa zestawu"
+                       th:field="*{name}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="serialNumberId" class="col-sm-2 col-form-label">Numer serii</label>
+            <div class="col-md-4">
+                <input type="text" name="serialNumber" class="form-control" id="serialNumberId"
+                       placeholder="Numer serii"
+                       th:field="*{serialNumber}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="blokcsNumberId" class="col-sm-2 col-form-label">Liczba klocków</label>
+            <div class="col-md-4">
+                <input type="number" name="blokcsNumber" class="form-control" id="blokcsNumberId"
+                       placeholder="Liczba klocków"
+                       th:field="*{blokcsNumber}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="buyDateId" class="col-sm-2 col-form-label">Data zakupu</label>
+            <div class="col-md-4">
+                <input type="date" name="buyDate" class="form-control" id="buyDateId" placeholder="Data zakupu"
+                       th:field="*{buyDate}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="categoryId" class="col-sm-2 col-form-label">Kategoria</label>
+            <div class="col-md-4">
+                <input type="text" name="category" class="form-control" id="categoryId" placeholder="Kategoria"
+                       th:field="*{category}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Przeznaczenie</label>
+            <div class="col-md-4">
+            <select th:field="*{targetAudience}" class="form-control" >
+                <option th:each="o: ${target}" th:value="${o.name()}" th:text="${o.name()}"></option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="descriptionId" class="col-sm-2 col-form-label">Opis</label>
+            <div class="col-md-4">
+                <textarea name="description" class="form-control" id="descriptionId" placeholder="Opis"
+                          th:field="*{description}"></textarea><br>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="imgUrlId" class="col-sm-2 col-form-label">Zdjęcie</label>
+            <div class="col-md-4">
+                <input type="text" name="category" class="form-control" id="imgUrlId" placeholder="Zdjęcie"
+                       th:field="*{imgUrl}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6" align="right">
+                <button type="submit" class="btn btn-primary col-sm-3">Dodaj</button>
+            </div>
+        </div>
+        <br/>
+    </form>
+</div>
+</body>
+</html>
