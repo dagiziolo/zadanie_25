@@ -27,6 +27,16 @@
         <img th:src="${lego.imgUrl}" class="rounded mx-auto d-block" alt="brak zdjęcia" width="500" height="500">
         <br/>
     </div>
+
+    <form th:object="${lego}" th:action="@{${lego.id}}" method="post">
+    <div class="form-group row">
+    <div class="col-md-12" align="right">
+    <button type="submit" class="btn btn-primary col-sm-2">Usuń</button>
+
+    </div>
+    </div>
+    </form>
+    <br/>
 </div>
 </body>
 </html>

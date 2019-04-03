@@ -48,9 +48,14 @@ public class LegoController {
     }
 
     @PostMapping("/dodaj")
-    public String postMovie(Lego lego) {
+    public String postLego(Lego lego) {
         legoRepository.save(lego);
         return "redirect:/";
     }
 
+    @PostMapping("/szczegoly/{id}")
+    public String deleteLego(@PathVariable Long id) {
+        legoRepository.deleteById(id);
+        return "redirect:/";
+    }
 }
